@@ -81,7 +81,7 @@ endmodule: isWrongTester
 
 module typeMiss
   (input logic [3:0] X, Y,
-  input logic Hit,
+   input logic Hit,
   output logic nearMiss, Miss);
 
   always_comb 
@@ -240,9 +240,10 @@ endmodule : shiphit_test
 
 module isHit
   (input logic [3:0] X, Y,
-  input logic [6:0] TotalHits,
+   input logic [3:0] CurrHits,
   output logic Hit, nearMiss, Miss,
   output logic [4:0] BiggestShipHit,
+  output logic [3:0] TotalHits,
   output logic [6:0] numHits);
 
   typeMiss TypeMiss(.*);
@@ -272,17 +273,28 @@ module isHit
       8'b1010_0001: Hit = 1'b1;
       default: Hit = 1'b0;
     endcase
-    if (Hit) numHits[6:0] = TotalHits[6:0] + 1;
-    else numHits[6:0] = TotalHits[6:0];
+    if (Hit) TotalHits[3:0] = CurrHits[3:0] + 1;
+    else TotalHits[3:0] = CurrHits[3:0];
   end
 
 endmodule: isHit
 
 module isHitTester ();
-  logic [3:0] X, Y,
-  logic [6:0] TotalHits,
+  logic [3:0] X, Y, CurrHits,
   logic Hit, nearMiss, Miss,
   logic [4:0] BiggestShipHit,
+  logic [3:0] TotalHits
   logic [6:0] numHits);
+
+  initial begin
+    $monitor($time, " X = %d, Y %d, CurrHits = %d, Hit = %b, nearMiss = %b, \
+             Miss = %b, TotalHits = %d, numHits = %d, BiggestShipHit = %b", 
+             X, Y, CurrHits, Hit, nearMiss, Miss, TotalHits, 
+             numHits, BiggestShipHit);
+    X = 4'b0001;
+    Y = 4'b0001;
+    CurrHits = 4'b0000;
+    #10 
+  end
 
 endmodule: isHitTester
