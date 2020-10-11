@@ -1,0 +1,90 @@
+0 
+21
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags=
+-Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-gen_obj
+-picarchive
+-sverilog
+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
+code2.sv
+57
+sysc_uni_pwd=/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3
+no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
+https_proxy=http://proximus.ece.cmu.edu:3128/
+http_proxy=http://proximus.ece.cmu.edu:3128/
+ftp_proxy=http://proximus.ece.cmu.edu:3128/
+XDG_SESSION_ID=9096
+XDG_RUNTIME_DIR=/run/user/2653287
+XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr2/vrajmoha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_IPC_HOOK_CLI=/run/user/2653287/vscode-ipc-6abf5327-aae1-4cd3-957d-52b4f457c180.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/2653287/vscode-git-68c9fd3e91.sock
+VSCODE_GIT_ASKPASS_NODE=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/node
+VSCODE_GIT_ASKPASS_MAIN=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass-main.js
+VMR_MODE_FLAG=32
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=amd64
+UNAME=/bin/uname
+TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
+TERM_PROGRAM_VERSION=1.50.0
+TERM_PROGRAM=vscode
+SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
+SYNOPSYS=/usr/local/synopsys
+SSH_CONNECTION=172.31.74.144 60632 172.19.137.178 22
+SSH_CLIENT=172.31.74.144 60632 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QUARTUS_64BIT=1
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+NO_PROXY=localhost,127.0.0.1,.cmu.edu,.cmu.local
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:2653287
+KDEDIRS=/usr
+HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
+HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
+HISTCONTROL=ignoredups
+GIT_ASKPASS=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass.sh
+FTP_PROXY=http://proximus.ece.cmu.edu:3128/
+DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
+CVS_RSH=ssh
+COLORTERM=truecolor
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+AKLOG=/usr/bin/aklog
+0
+1
+1602439847 code2.sv
+4
+0 
+1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
+1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+1602439850 simv.daidir

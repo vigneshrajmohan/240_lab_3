@@ -1,0 +1,50 @@
+{
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "shipHit": [
+            "shipHit",
+            "LKbQB",
+            "module"
+        ]
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "stat": {
+        "nMops": 848
+    },
+    "Misc": {
+        "default_output_dir": "csrc",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
+        "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
+        "archive_dir": "archive.0"
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "shipHit"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 57726
+    },
+    "CurCompileUdps": {},
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.1245.json"
+    ],
+    "CompileStatus": "Successful"
+}
