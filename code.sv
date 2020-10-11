@@ -286,41 +286,46 @@ module isHit
   (input logic [3:0] X, Y,
    input logic [3:0] CurrHits,
    input logic [4:0] CurrBiggest,
+   input logic HasHit,
   output logic Hit, nearMiss, Miss,
   output logic [4:0] BiggestShipHit,
   output logic [3:0] TotalHits,
   output logic [6:0] numHits);
 
+  logic ThisHits;
+ 
   typeMiss TypeMiss(.*);
 
   shipHit ShipHit(.*);
 
   always_comb begin
     unique case({X, Y})
-      8'b0001_0010: Hit = 1'b1;
-      8'b0010_0001: Hit = 1'b1;
-      8'b0010_0010: Hit = 1'b1;
-      8'b0010_0011: Hit = 1'b1;
-      8'b0010_1000: Hit = 1'b1;
-      8'b0010_1001: Hit = 1'b1;
-      8'b0010_1010: Hit = 1'b1;
-      8'b0011_0001: Hit = 1'b1;
-      8'b0011_0010: Hit = 1'b1;
-      8'b0011_0011: Hit = 1'b1;
-      8'b0100_0001: Hit = 1'b1;
-      8'b0100_0010: Hit = 1'b1;
-      8'b0100_0011: Hit = 1'b1;
-      8'b0101_0011: Hit = 1'b1;
-      8'b0110_0011: Hit = 1'b1;
-      8'b0111_0110: Hit = 1'b1;
-      8'b1000_0110: Hit = 1'b1;
-      8'b1001_0001: Hit = 1'b1;
-      8'b1010_0001: Hit = 1'b1;
-      default: Hit = 1'b0;
+      8'b0001_0010: ThisHits = 1'b1;
+      8'b0010_0001: ThisHits = 1'b1;
+      8'b0010_0010: ThisHits = 1'b1;
+      8'b0010_0011: ThisHits = 1'b1;
+      8'b0010_1000: ThisHits = 1'b1;
+      8'b0010_1001: ThisHits = 1'b1;
+      8'b0010_1010: ThisHits = 1'b1;
+      8'b0011_0001: ThisHits = 1'b1;
+      8'b0011_0010: ThisHits = 1'b1;
+      8'b0011_0011: ThisHits = 1'b1;
+      8'b0100_0001: ThisHits = 1'b1;
+      8'b0100_0010: ThisHits = 1'b1;
+      8'b0100_0011: ThisHits = 1'b1;
+      8'b0101_0011: ThisHits = 1'b1;
+      8'b0110_0011: ThisHits = 1'b1;
+      8'b0111_0110: ThisHits = 1'b1;
+      8'b1000_0110: ThisHits = 1'b1;
+      8'b1001_0001: ThisHits = 1'b1;
+      8'b1010_0001: ThisHits = 1'b1;
+      default: ThisHits = 1'b0;
     endcase
     if (Hit) TotalHits[3:0] = CurrHits[3:0] + 1;
     else TotalHits[3:0] = CurrHits[3:0];
   end
+
+  assign Hit = HasHit || ThisHits;
 
   BCDtoSevenSegment BCD2SevenSegment(.*);
 
@@ -328,7 +333,7 @@ endmodule: isHit
 
 module isHitTester ();
   logic [3:0] X, Y, CurrHits;
-  logic Hit, nearMiss, Miss;
+  logic Hit, nearMiss, Miss, HasHit;
   logic [4:0] BiggestShipHit, CurrBiggest;
   logic [3:0] TotalHits;
   logic [6:0] numHits;
@@ -344,6 +349,7 @@ module isHitTester ();
     Y = 4'b0001;
     CurrHits = 4'b0000;
     CurrBiggest = 5'b00000;
+    HasHit = 0;
     #10 Y = 4'b0010;
     #10 CurrHits = 4'b0011;
     #10 X = 4'b1001;
@@ -365,6 +371,10 @@ module isBomb
   logic [3:0] CurrHits5, CurrHits6, CurrHits7, CurrHits8, CurrHits9;
   logic [3:0] XLo, XHi, YLo, YHi;
   logic [4:0] CurrBiggest;
+  logic [6:0] numHits1, numHits2, numHits3, numHits4;
+  logic [6:0] numHits5, numHits6, numHits7, numHits8;
+  logic Hit1, Hit2, Hit3, Hit4, Hit5, Hit6, Hit7, Hit8;
+  logic HasHit0, HasHit1, HasHit2, HasHit3, HasHit4, HasHit5, HasHit6, HasHit7, HasHit8;
 
   isWrong IsWrong(.*);
 
@@ -386,32 +396,32 @@ module isBomb
   assign CurrHits0 = 4'b0000;
   assign CurrBiggest = 5'b00000;
 
-  isHit isHit1(.X(X), .Y(Y), .CurrHits(CurrHits0), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits1), .numHits(numHits), 
+  isHit isHit1(.X(X), .Y(Y), .CurrHits(CurrHits0), .Hit(Hit1), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits1), .numHits(numHits1), .HasHit(HasHit0), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit2(.X(X), .Y(Y), .CurrHits(CurrHits1), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits2), .numHits(numHits),
+  isHit isHit2(.X(X), .Y(Y), .CurrHits(CurrHits1), .Hit(Hit2), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits2), .numHits(numHits2), .HasHit(HasHit1), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit3(.X(X), .Y(Y), .CurrHits(CurrHits2), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits3), .numHits(numHits),
+  isHit isHit3(.X(X), .Y(Y), .CurrHits(CurrHits2), .Hit(Hit3), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits3), .numHits(numHits3), .HasHit(HasHit2), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit4(.X(X), .Y(Y), .CurrHits(CurrHits3), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits4), .numHits(numHits),
+  isHit isHit4(.X(X), .Y(Y), .CurrHits(CurrHits3), .Hit(Hit4), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits4), .numHits(numHits4), .HasHit(HasHit3), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit5(.X(X), .Y(Y), .CurrHits(CurrHits4), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits5), .numHits(numHits),
+  isHit isHit5(.X(X), .Y(Y), .CurrHits(CurrHits4), .Hit(Hit5), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits5), .numHits(numHits5), .HasHit(HasHit4), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit6(.X(X), .Y(Y), .CurrHits(CurrHits5), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits6), .numHits(numHits),
+  isHit isHit6(.X(X), .Y(Y), .CurrHits(CurrHits5), .Hit(Hit6), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits6), .numHits(numHits6), .HasHit(HasHit5), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit7(.X(X), .Y(Y), .CurrHits(CurrHits6), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits7), .numHits(numHits),
+  isHit isHit7(.X(X), .Y(Y), .CurrHits(CurrHits6), .Hit(Hit7), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits7), .numHits(numHits7), .HasHit(HasHit6), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit8(.X(X), .Y(Y), .CurrHits(CurrHits7), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits8), .numHits(numHits),
+  isHit isHit8(.X(X), .Y(Y), .CurrHits(CurrHits7), .Hit(Hit8), .nearMiss(nearMiss), .Miss(Miss), 
+               .TotalHits(CurrHits8), .numHits(numHits8), .HasHit(HasHit7), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
   isHit isHit9(.X(X), .Y(Y), .CurrHits(CurrHits8), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits9), .numHits(numHits),
+               .TotalHits(CurrHits9), .numHits(numHits), .HasHit(HasHit8), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
 
 endmodule: isBomb
