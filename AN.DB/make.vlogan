@@ -1,0 +1,12 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -sverilog -full64
+
+all :		_VCSgd_onilwd_1.db \
+
+
+
+_VCSgd_onilwd_1.db :	code.sv 
+		${VLOGAN}  ${VLOGAN_OPT} code.sv
+
+
