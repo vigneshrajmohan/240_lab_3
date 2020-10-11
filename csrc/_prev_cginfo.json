@@ -1,31 +1,38 @@
 {
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.233950.json"
+    ],
     "MlibObjs": {},
+    "stat": {
+        "nMops": 1161
+    },
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
-                "mode": 4,
                 "bytes": 29004,
+                "archive": "archive.27/_233950_archive_1.a",
                 "mod": "std",
                 "out": "reYIK_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
+                "mode": 4
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "mode": 4,
-                "bytes": 7336,
+                "bytes": 8854,
+                "archive": "archive.27/_233950_archive_1.a",
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
+                "mode": 4
             }
         },
         "shiphit_test": {
             "TbST5_d": {
-                "mode": 4,
-                "bytes": 18134,
+                "bytes": 11306,
+                "archive": "archive.27/_233950_archive_1.a",
                 "mod": "shiphit_test",
                 "out": "TbST5_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
+                "mode": 4
             }
         }
     },
@@ -35,100 +42,39 @@
             "reYIK",
             "module"
         ],
-        "BCDtoSevenSegment": [
-            "BCDtoSevenSegment",
-            "kuSVi",
-            "module"
-        ],
-        "typeMissTester": [
-            "typeMissTester",
-            "d9GSv",
-            "module"
-        ],
-        "isWrongTester": [
-            "isWrongTester",
-            "ahaet",
-            "module"
-        ],
-        "isWrong": [
-            "isWrong",
-            "hvMcZ",
+        "shiphit_test": [
+            "shiphit_test",
+            "TbST5",
             "module"
         ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
-        ],
-        "BCDtoSevenSegment_test": [
-            "BCDtoSevenSegment_test",
-            "ggRx6",
-            "module"
-        ],
-        "typeMiss": [
-            "typeMiss",
-            "c4W1f",
-            "module"
-        ],
-        "shipHit": [
-            "shipHit",
-            "LKbQB",
-            "module"
-        ],
-        "shiphit_test": [
-            "shiphit_test",
-            "TbST5",
-            "module"
-        ],
-        "isHitTester": [
-            "isHitTester",
-            "azIL0",
-            "module"
-        ],
-        "isBomb": [
-            "isBomb",
-            "SA3Kx",
-            "module"
         ]
     },
-    "CompileStatus": "Successful",
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "nMops": 3285
-    },
-    "PEModules": [],
     "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 62862
+        "bytes": 62782
     },
     "CurCompileModules": [
         "...MASTER...",
         "std",
-        "isWrong",
-        "isWrongTester",
-        "BCDtoSevenSegment",
-        "BCDtoSevenSegment_test",
-        "typeMiss",
-        "typeMissTester",
-        "shipHit",
-        "shiphit_test",
-        "isHitTester",
-        "isBomb"
+        "shiphit_test"
     ],
-    "CompileProcesses": [
-        "cgproc.233356.json"
-    ],
-    "LVLData": [
-        "SIM"
-    ],
+    "PEModules": [],
     "Misc": {
-        "archive_dir": "archive.26",
-        "default_output_dir": "csrc",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
         "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
+        "daidir": "simv.daidir",
         "csrc": "csrc",
+        "default_output_dir": "csrc",
         "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
-        "daidir": "simv.daidir"
-    }
+        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
+        "archive_dir": "archive.27"
+    },
+    "CompileStatus": "Successful"
 }

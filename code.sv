@@ -375,6 +375,8 @@ module isBomb
   logic [6:0] numHits5, numHits6, numHits7, numHits8;
   logic Hit1, Hit2, Hit3, Hit4, Hit5, Hit6, Hit7, Hit8;
   logic HasHit0, HasHit1, HasHit2, HasHit3, HasHit4, HasHit5, HasHit6, HasHit7, HasHit8;
+  logic nearMiss1, nearMiss2, nearMiss3, nearMiss4, nearMiss5, nearMiss6, nearMiss7, nearMiss8;
+  logic Miss1, Miss2, Miss3, Miss4, Miss5, Miss6, Miss7, Miss8;
 
   isWrong IsWrong(.*);
 
@@ -396,28 +398,28 @@ module isBomb
   assign CurrHits0 = 4'b0000;
   assign CurrBiggest = 5'b00000;
 
-  isHit isHit1(.X(X), .Y(Y), .CurrHits(CurrHits0), .Hit(Hit1), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit1(.X(X), .Y(Y), .CurrHits(CurrHits0), .Hit(Hit1), .nearMiss(nearMiss1), .Miss(Miss1), 
                .TotalHits(CurrHits1), .numHits(numHits1), .HasHit(HasHit0), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit2(.X(X), .Y(Y), .CurrHits(CurrHits1), .Hit(Hit2), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit2(.X(X), .Y(Y), .CurrHits(CurrHits1), .Hit(Hit2), .nearMiss(nearMiss2, .Miss(Miss2), 
                .TotalHits(CurrHits2), .numHits(numHits2), .HasHit(HasHit1), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit3(.X(X), .Y(Y), .CurrHits(CurrHits2), .Hit(Hit3), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit3(.X(X), .Y(Y), .CurrHits(CurrHits2), .Hit(Hit3), .nearMiss(nearMiss3), .Miss(Miss3), 
                .TotalHits(CurrHits3), .numHits(numHits3), .HasHit(HasHit2), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit4(.X(X), .Y(Y), .CurrHits(CurrHits3), .Hit(Hit4), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit4(.X(X), .Y(Y), .CurrHits(CurrHits3), .Hit(Hit4), .nearMiss(nearMiss4), .Miss(Miss4), 
                .TotalHits(CurrHits4), .numHits(numHits4), .HasHit(HasHit3), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit5(.X(X), .Y(Y), .CurrHits(CurrHits4), .Hit(Hit5), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit5(.X(X), .Y(Y), .CurrHits(CurrHits4), .Hit(Hit5), .nearMiss(nearMiss5), .Miss(Miss5), 
                .TotalHits(CurrHits5), .numHits(numHits5), .HasHit(HasHit4), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit6(.X(X), .Y(Y), .CurrHits(CurrHits5), .Hit(Hit6), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit6(.X(X), .Y(Y), .CurrHits(CurrHits5), .Hit(Hit6), .nearMiss(nearMiss6), .Miss(Miss6), 
                .TotalHits(CurrHits6), .numHits(numHits6), .HasHit(HasHit5), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit7(.X(X), .Y(Y), .CurrHits(CurrHits6), .Hit(Hit7), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit7(.X(X), .Y(Y), .CurrHits(CurrHits6), .Hit(Hit7), .nearMiss(nearMiss7), .Miss(Miss7), 
                .TotalHits(CurrHits7), .numHits(numHits7), .HasHit(HasHit6), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit8(.X(X), .Y(Y), .CurrHits(CurrHits7), .Hit(Hit8), .nearMiss(nearMiss), .Miss(Miss), 
+  isHit isHit8(.X(X), .Y(Y), .CurrHits(CurrHits7), .Hit(Hit8), .nearMiss(nearMiss8), .Miss(Miss8), 
                .TotalHits(CurrHits8), .numHits(numHits8), .HasHit(HasHit7), 
                .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
   isHit isHit9(.X(X), .Y(Y), .CurrHits(CurrHits8), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 

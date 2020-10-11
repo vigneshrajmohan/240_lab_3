@@ -4,14 +4,14 @@
         "reYIK",
         "module"
     ],
-    "shiphit_test": [
-        "shiphit_test",
-        "TbST5",
-        "module"
-    ],
     "...MASTER...": [
         "SIM",
         "amcQw",
+        "module"
+    ],
+    "shiphit_test": [
+        "shiphit_test",
+        "TbST5",
         "module"
     ]
 }
