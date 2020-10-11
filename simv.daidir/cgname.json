@@ -1,7 +1,7 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "shiphit_test": [
+        "shiphit_test",
+        "TbST5",
         "module"
     ],
     "std": [
@@ -9,9 +9,9 @@
         "reYIK",
         "module"
     ],
-    "shipHit": [
-        "shipHit",
-        "LKbQB",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }

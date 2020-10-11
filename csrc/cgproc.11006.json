@@ -1,0 +1,42 @@
+{
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "bytes": 7336,
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "archive": "archive.6/_11006_archive_1.a"
+        },
+        "TbST5_d": {
+            "mod": "shiphit_test",
+            "bytes": 15791,
+            "out": "TbST5_d.o",
+            "mode": 4,
+            "archive": "archive.6/_11006_archive_1.a"
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "shiphit_test": {
+            "Compiled Times": 6,
+            "Compiled": "Yes"
+        },
+        "std": {}
+    },
+    "ObjArchives": [
+        {
+            "size": 23127,
+            "archive": "archive.6/_11006_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "TbST5_d.o",
+                    15791
+                ]
+            ]
+        }
+    ]
+}

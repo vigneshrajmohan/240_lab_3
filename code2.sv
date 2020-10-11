@@ -65,3 +65,24 @@ module shipHit
     end
 
 endmodule: shipHit
+
+
+module shiphit_test();
+
+    logic [3:0] X, Y;
+    logic [4:0] BiggestShipHit;
+    shipHit dut (.*);
+
+  initial begin
+    $monitor("X: %h, Y: %h, BiggestShip: %b", X, Y, BiggestShipHit);
+       X = 4'b0011; Y = 4'b0011;
+    #5 X = 4'b0011; Y = 4'b0010;
+    #5 X = 4'b0100; Y = 4'b0001;
+    #5 X = 4'b0010; Y = 4'b1001;
+    #5 X = 4'b0111; Y = 4'b0110;
+    #5 X = 4'b1001; Y = 4'b0001;
+    #5 X = 4'b0001; Y = 4'b0001;
+    #5 $finish;
+  end
+
+endmodule : shiphit_test

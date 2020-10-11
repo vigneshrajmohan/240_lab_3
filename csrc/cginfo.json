@@ -1,8 +1,48 @@
 {
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "shiphit_test": {
+            "TbST5_d": {
+                "out": "TbST5_d.o",
+                "bytes": 15791,
+                "mod": "shiphit_test",
+                "mode": 4,
+                "archive": "archive.6/_11006_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.6/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 7336,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "archive": "archive.6/_11006_archive_1.a"
+            }
+        }
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "shiphit_test"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.11006.json"
+    ],
     "NameTable": {
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
+        "shiphit_test": [
+            "shiphit_test",
+            "TbST5",
             "module"
         ],
         "std": [
@@ -10,41 +50,30 @@
             "reYIK",
             "module"
         ],
-        "shipHit": [
-            "shipHit",
-            "LKbQB",
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
             "module"
         ]
     },
-    "LVLData": [
-        "SIM"
-    ],
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "bytes": 57992,
+        "out": "amcQwB.o"
+    },
+    "CompileStatus": "Successful",
+    "PEModules": [],
     "stat": {
-        "nMops": 848
+        "nMops": 609
     },
     "Misc": {
-        "default_output_dir": "csrc",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
         "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
         "csrc": "csrc",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
+        "archive_dir": "archive.6",
+        "default_output_dir": "csrc",
         "daidir": "simv.daidir",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
-        "archive_dir": "archive.0"
-    },
-    "CompileStrategy": "fullobj",
-    "CurCompileModules": [
-        "...MASTER...",
-        "std",
-        "shipHit"
-    ],
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 57726
-    },
-    "CurCompileUdps": {},
-    "PEModules": [],
-    "CompileProcesses": [
-        "cgproc.1245.json"
-    ],
-    "CompileStatus": "Successful"
+        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir"
+    }
 }
