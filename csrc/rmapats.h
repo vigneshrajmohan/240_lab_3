@@ -1910,6 +1910,27 @@ static inline U asm_bsf (U in)
 #ifdef __cplusplus
 extern "C" {
 #endif
+void  hsM_0_0 (UB  * pcode, scalar  val);
+void  hsM_0_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
+void  hsM_0_2 (UB  * pcode);
+void  hsM_0_11 (UB  * pcode, scalar  val);
+void  hsM_1_0 (UB  * pcode, scalar  val);
+void  hsM_2_0 (UB  * pcode, scalar  val);
+void  hsM_2_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
+void  hsM_2_2 (UB  * pcode);
+void  hsM_2_11 (UB  * pcode, scalar  val);
+void  hsM_3_0 (UB  * pcode, scalar  val);
+void  hsM_3_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
+void  hsM_3_2 (UB  * pcode);
+void  hsM_3_11 (UB  * pcode, scalar  val);
+void  hsM_4_0 (UB  * pcode, scalar  val);
+void  hsM_4_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
+void  hsM_4_2 (UB  * pcode);
+void  hsM_4_11 (UB  * pcode, scalar  val);
+void  hsM_5_0 (UB  * pcode, scalar  val);
+void  hsM_5_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
+void  hsM_5_2 (UB  * pcode);
+void  hsM_5_11 (UB  * pcode, scalar  val);
 void  hsG_0 (struct dummyq_struct * I1008, EBLK  * I1009, U  I714);
 #ifdef __cplusplus
 }

@@ -1,0 +1,206 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.1/_261098_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    8854
+                ],
+                [
+                    "reYIK_d.o",
+                    34314
+                ],
+                [
+                    "hvMcZ_d.o",
+                    13327
+                ],
+                [
+                    "ahaet_d.o",
+                    14942
+                ],
+                [
+                    "kuSVi_d.o",
+                    9922
+                ],
+                [
+                    "ggRx6_d.o",
+                    10920
+                ],
+                [
+                    "c4W1f_d.o",
+                    12479
+                ],
+                [
+                    "d9GSv_d.o",
+                    12812
+                ],
+                [
+                    "LKbQB_d.o",
+                    15614
+                ],
+                [
+                    "TbST5_d.o",
+                    12949
+                ],
+                [
+                    "TsN5M_d.o",
+                    12618
+                ],
+                [
+                    "azIL0_d.o",
+                    12358
+                ],
+                [
+                    "SA3Kx_d.o",
+                    24996
+                ]
+            ],
+            "size": 196105
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "typeMiss": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isHit": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "shiphit_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "shipHit": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isWrong": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "BCDtoSevenSegment": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isWrongTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "BCDtoSevenSegment_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isBomb": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "typeMissTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isHitTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 8854,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 34314,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "ahaet_d": {
+            "mod": "isWrongTester",
+            "out": "ahaet_d.o",
+            "bytes": 14942,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "hvMcZ_d": {
+            "mod": "isWrong",
+            "out": "hvMcZ_d.o",
+            "bytes": 13327,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "azIL0_d": {
+            "mod": "isHitTester",
+            "out": "azIL0_d.o",
+            "bytes": 12358,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "kuSVi_d": {
+            "mod": "BCDtoSevenSegment",
+            "out": "kuSVi_d.o",
+            "bytes": 9922,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "d9GSv_d": {
+            "mod": "typeMissTester",
+            "out": "d9GSv_d.o",
+            "bytes": 12812,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "TbST5_d": {
+            "mod": "shiphit_test",
+            "out": "TbST5_d.o",
+            "bytes": 12949,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "ggRx6_d": {
+            "mod": "BCDtoSevenSegment_test",
+            "out": "ggRx6_d.o",
+            "bytes": 10920,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "LKbQB_d": {
+            "mod": "shipHit",
+            "out": "LKbQB_d.o",
+            "bytes": 15614,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "c4W1f_d": {
+            "mod": "typeMiss",
+            "out": "c4W1f_d.o",
+            "bytes": 12479,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "TsN5M_d": {
+            "mod": "isHit",
+            "out": "TsN5M_d.o",
+            "bytes": 12618,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        },
+        "SA3Kx_d": {
+            "mod": "isBomb",
+            "out": "SA3Kx_d.o",
+            "bytes": 24996,
+            "mode": 4,
+            "archive": "archive.1/_261098_archive_1.a"
+        }
+    }
+}
