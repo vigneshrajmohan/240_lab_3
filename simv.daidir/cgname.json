@@ -9,9 +9,20 @@
         "reYIK",
         "module"
     ],
+<<<<<<< HEAD
     "isHitTester": [
         "isHitTester",
         "azIL0",
+=======
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+>>>>>>> 1f5b7b439baa21c55ac80bd29ade0b01e3773232
+        "module"
+    ],
+    "shiphit_test": [
+        "shiphit_test",
+        "TbST5",
         "module"
     ]
 }
