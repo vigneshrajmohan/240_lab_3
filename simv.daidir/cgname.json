@@ -4,9 +4,14 @@
         "reYIK",
         "module"
     ],
-    "isHitTester": [
-        "isHitTester",
-        "azIL0",
+    "isHit": [
+        "isHit",
+        "TsN5M",
+        "module"
+    ],
+    "isBombTester": [
+        "isBombTester",
+        "D8jRU",
         "module"
     ],
     "...MASTER...": [

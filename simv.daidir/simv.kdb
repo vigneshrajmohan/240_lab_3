@@ -1,9 +1,9 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3
+COMPILE_PATH=/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
-TOP=isWrongTester BCDtoSevenSegment_test typeMissTester shiphit_test isHitTester isBomb 
+TOP=isWrongTester BCDtoSevenSegment_test typeMissTester shiphit_test isHitTester isBombTester 

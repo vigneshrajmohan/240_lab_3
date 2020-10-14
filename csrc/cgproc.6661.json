@@ -1,0 +1,71 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 8
+        },
+        "isHit": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "isBombTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4,
+            "archive": "archive.17/_6661_archive_1.a"
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 29004,
+            "mode": 4,
+            "archive": "archive.17/_6661_archive_1.a"
+        },
+        "D8jRU_d": {
+            "mod": "isBombTester",
+            "out": "D8jRU_d.o",
+            "bytes": 31398,
+            "mode": 4,
+            "archive": "archive.17/_6661_archive_1.a"
+        },
+        "TsN5M_d": {
+            "mod": "isHit",
+            "out": "TsN5M_d.o",
+            "bytes": 18032,
+            "mode": 4,
+            "archive": "archive.17/_6661_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "reYIK_d.o",
+                    29004
+                ],
+                [
+                    "D8jRU_d.o",
+                    31398
+                ],
+                [
+                    "TsN5M_d.o",
+                    18032
+                ]
+            ],
+            "archive": "archive.17/_6661_archive_1.a",
+            "size": 85770
+        }
+    ]
+}

@@ -1,36 +1,113 @@
 {
+    "LVLData": [
+        "SIM"
+    ],
     "MlibObjs": {},
-    "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "CompileStatus": "Successful",
     "PrevCompiledModules": {
+        "isHit": {
+            "TsN5M_d": {
+                "bytes": 18032,
+                "mod": "isHit",
+                "out": "TsN5M_d.o",
+                "mode": 4,
+                "archive": "archive.16/_5999_archive_1.a"
+            }
+        },
         "std": {
             "reYIK_d": {
                 "bytes": 29004,
                 "mod": "std",
-                "mode": 4,
                 "out": "reYIK_d.o",
-                "archive": "archive.10/_55193_archive_1.a"
+                "mode": 4,
+                "archive": "archive.16/_5999_archive_1.a"
             }
         },
-        "isHitTester": {
-            "azIL0_d": {
-                "bytes": 21254,
-                "mod": "isHitTester",
+        "isBombTester": {
+            "D8jRU_d": {
+                "bytes": 31194,
+                "mod": "isBombTester",
+                "out": "D8jRU_d.o",
                 "mode": 4,
-                "out": "azIL0_d.o",
-                "archive": "archive.10/_55193_archive_1.a"
+                "archive": "archive.16/_5999_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
                 "bytes": 7336,
                 "mod": "...MASTER...",
-                "archive": "archive.10/_55193_archive_1.a",
                 "out": "amcQw_d.o",
-                "mode": 4
+                "mode": 4,
+                "archive": "archive.16/_5999_archive_1.a"
             }
         }
+    },
+    "CurCompileUdps": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "isBombTester": [
+            "isBombTester",
+            "D8jRU",
+            "module"
+        ],
+        "isWrong": [
+            "isWrong",
+            "hvMcZ",
+            "module"
+        ],
+        "isWrongTester": [
+            "isWrongTester",
+            "ahaet",
+            "module"
+        ],
+        "typeMiss": [
+            "typeMiss",
+            "c4W1f",
+            "module"
+        ],
+        "BCDtoSevenSegment": [
+            "BCDtoSevenSegment",
+            "kuSVi",
+            "module"
+        ],
+        "BCDtoSevenSegment_test": [
+            "BCDtoSevenSegment_test",
+            "ggRx6",
+            "module"
+        ],
+        "typeMissTester": [
+            "typeMissTester",
+            "d9GSv",
+            "module"
+        ],
+        "shipHit": [
+            "shipHit",
+            "LKbQB",
+            "module"
+        ],
+        "isHitTester": [
+            "isHitTester",
+            "azIL0",
+            "module"
+        ],
+        "isHit": [
+            "isHit",
+            "TsN5M",
+            "module"
+        ],
+        "shiphit_test": [
+            "shiphit_test",
+            "TbST5",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
     },
     "CurCompileModules": [
         "...MASTER...",
@@ -45,96 +122,28 @@
         "shiphit_test",
         "isHit",
         "isHitTester",
-        "isBomb"
+        "isBombTester"
     ],
-    "Misc": {
-        "daidir": "simv.daidir",
-        "csrc": "csrc",
-        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
-        "archive_dir": "archive.10",
-        "default_output_dir": "csrc"
-    },
-    "NameTable": {
-        "std": [
-            "std",
-            "reYIK",
-            "module"
-        ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ],
-        "isWrong": [
-            "isWrong",
-            "hvMcZ",
-            "module"
-        ],
-        "shipHit": [
-            "shipHit",
-            "LKbQB",
-            "module"
-        ],
-        "shiphit_test": [
-            "shiphit_test",
-            "TbST5",
-            "module"
-        ],
-        "isWrongTester": [
-            "isWrongTester",
-            "ahaet",
-            "module"
-        ],
-        "BCDtoSevenSegment": [
-            "BCDtoSevenSegment",
-            "kuSVi",
-            "module"
-        ],
-        "typeMiss": [
-            "typeMiss",
-            "c4W1f",
-            "module"
-        ],
-        "BCDtoSevenSegment_test": [
-            "BCDtoSevenSegment_test",
-            "ggRx6",
-            "module"
-        ],
-        "isHitTester": [
-            "isHitTester",
-            "azIL0",
-            "module"
-        ],
-        "typeMissTester": [
-            "typeMissTester",
-            "d9GSv",
-            "module"
-        ],
-        "isHit": [
-            "isHit",
-            "TsN5M",
-            "module"
-        ],
-        "isBomb": [
-            "isBomb",
-            "SA3Kx",
-            "module"
-        ]
-    },
+    "CompileProcesses": [
+        "cgproc.5999.json"
+    ],
+    "CompileStrategy": "fullobj",
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 96142
+        "bytes": 96312
     },
-    "LVLData": [
-        "SIM"
-    ],
     "PEModules": [],
-    "CompileProcesses": [
-        "cgproc.55193.json"
-    ],
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.16"
+    },
     "stat": {
-        "nMops": 4911
-    }
+        "nMops": 5689
+    },
+    "CompileStatus": "Successful"
 }

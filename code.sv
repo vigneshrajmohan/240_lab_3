@@ -389,6 +389,11 @@ module isBomb
   isHit isHit9(.X(XHi), .Y(YHi), .Hit(Hit9), .nearMiss(nearMiss9), .Miss(Miss9), 
                .BiggestShipHit(BiggestShipHit9));
 
+
+  assign Hit = Hit1 | Hit2 | Hit3 | Hit4 | Hit5 | Hit6 | Hit7 | Hit8 | Hit9;
+  assign nearMiss = (nearMiss1 | nearMiss2 | nearMiss3 | nearMiss4 | nearMiss5 | nearMiss6 | nearMiss7 | nearMiss8 | nearMiss9) & (!Hit);
+  assign Miss = (!nearMiss) & (!Hit);
+
   always_comb begin
     TotalHits = 4'b0000;
     if (Hit1) TotalHits += 1;
@@ -417,3 +422,36 @@ module isBomb
   BCDtoSevenSegment BCD2SevenSegment(.*);
 
 endmodule: isBomb
+
+
+module isBombTester ();
+  logic [3:0] X, Y;
+  logic [1:0] BigLeft;
+  logic Big, ScoreThis;
+  logic [6:0] numHits;
+  logic [4:0] BiggestShipHit;
+  logic Hit, nearMiss, Miss, SomethingIsWrong;
+
+  isBomb dut(.*);
+
+  initial begin
+    $monitor($time, " X = %d, Y = %d, BigLeft = %b, Big = %b, ScoreThis = %b, numHits = %b,\
+            BiggestShipHit = %b, Hit = %b, nearMiss = %b, Miss = %b, SomethingIsWrong = %b", 
+             X, Y, BigLeft, Big, ScoreThis, numHits, BiggestShipHit, Hit, nearMiss, Miss, SomethingIsWrong);
+    X = 4'd1;
+    Y = 4'd1;
+    BigLeft = 2'b10;
+    Big = 2'b0;
+    ScoreThis = 1'b1;
+    #10 Y = 4'd2;
+    #10 Y = 4'd4;
+    #10 X = 4'd6; //nearMiss
+    #10 Y = 4'd1; //Miss
+    #10 X = 4'd8; //nearMiss
+    Big = 1'b1;
+    #10 Y = 4'd6; 
+    #10 Y = 4'd15; 
+    #10 $finish;
+  end
+
+endmodule: isBombTester
