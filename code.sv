@@ -53,27 +53,27 @@ module isWrongTester ();
     Y = 4'b0001;
     BigLeft = 2'b01;
     Big = 1'b0;
-    ScoreThis = 1'b1;
-    #10 X = 4'b0000;
-    #10 X = 4'b1010;
-    #10 X = 4'b1111;
-    #10 X = 4'b0011;
-    Y = 4'b0000;
-    #10 Y = 4'b1010;
-    #10 Y = 4'b1111;
-    #10 Y = 4'b0011;
-    BigLeft = 2'b11;
-    #10 BigLeft = 2'b00;
-    Big = 1'b1;
-    #10 BigLeft = 2'b01;
-    #10 ScoreThis = 1'b0;
-    BigLeft = 2'b00;
-    #10 Big = 1'b0;
-    BigLeft = 2'b11;
+    ScoreThis = 1'b1; //0
+    #10 X = 4'b0000;  //1
+    #10 X = 4'b1010;  //0
+    #10 X = 4'b1111;  //1
+    #10 X = 4'b0011; 
+    Y = 4'b0000;      //1
+    #10 Y = 4'b1010;  //0
+    #10 Y = 4'b1111;  //1
+    #10 Y = 4'b0011;  
+    BigLeft = 2'b11;  //1
+    #10 BigLeft = 2'b00; 
+    Big = 1'b1;       //1
+    #10 BigLeft = 2'b01; //0
+    #10 ScoreThis = 1'b0; 
+    BigLeft = 2'b00;  //0
+    #10 Big = 1'b0;   
+    BigLeft = 2'b11;  //0
     #10 BigLeft = 2'b10;
-    X = 4'b1110;
+    X = 4'b1110;      //0
     #10 X = 4'b0110;
-    Y = 4'b1100;
+    Y = 4'b1100;     //0
     #10 $finish;
   end
 
@@ -110,11 +110,11 @@ module BCDtoSevenSegment_test();
             "bcd = %b, sevenSegment = %b",
             TotalHits, numHits);
 
-        TotalHits = 4'b0000;
-    #10 TotalHits = 4'b0100;
-    #10 TotalHits = 4'b1001;
-    #10 TotalHits = 4'b1111;
-    #10 TotalHits = 4'b0011;
+        TotalHits = 4'b0000; //0
+    #10 TotalHits = 4'b0100; //4
+    #10 TotalHits = 4'b1001; //9
+    #10 TotalHits = 4'b1111; //invalid
+    #10 TotalHits = 4'b0011; //3
 
    end
 endmodule : BCDtoSevenSegment_test
@@ -171,16 +171,16 @@ module typeMissTester ();
              X, Y, Hit, nearMiss, Miss);
     X = 4'd1;
     Y = 4'd1;
-    Hit = 1'b0;
+    Hit = 1'b0; //nearMiss
     #10 Y = 4'd2;
-    Hit = 1'b1;
+    Hit = 1'b1; //Hit
     #10 Y = 4'd4;
-    Hit = 1'b0;
-    #10 X = 4'd6;
-    #10 Y = 4'd1;
-    #10 X = 4'd8;
-    #10 Y = 4'd6;
-    Hit = 1'b1;
+    Hit = 1'b0; //Miss
+    #10 X = 4'd6; //nearMiss
+    #10 Y = 4'd1; //Miss
+    #10 X = 4'd8; //nearMiss
+    #10 Y = 4'd6; 
+    Hit = 1'b1; //Hit
     #10 $finish;
   end
 
@@ -264,15 +264,13 @@ module shiphit_test();
 
   initial begin
     $monitor("X: %d, Y: %d, BiggestShip: %b", X, Y, BiggestShipHit);
-       X = 4'b0011; Y = 4'b0011;
-    #5 X = 4'b0011; Y = 4'b0010;
-    #5 X = 4'b0011; Y = 4'b0010;
-    #5 X = 4'b0100; Y = 4'b0001;
-    #5 X = 4'b0010; Y = 4'b1001;
-    #5 X = 4'b0010; Y = 4'b1001;
-    #5 X = 4'b0111; Y = 4'b0110;
-    #5 X = 4'b1001; Y = 4'b0001;
-    #5 X = 4'b0001; Y = 4'b0001;
+       X = 4'b0011; Y = 4'b0011; //Aircraft_C
+    #5 X = 4'b0011; Y = 4'b0010; //Battleship
+    #5 X = 4'b0100; Y = 4'b0001; //Cruiser
+    #5 X = 4'b0010; Y = 4'b1001; //Sub
+    #5 X = 4'b0111; Y = 4'b0110; //Patrol
+    #5 X = 4'b1001; Y = 4'b0001; //Patrol
+    #5 X = 4'b0001; Y = 4'b0001; //No Ship
     #5 $finish;
   end
 
@@ -325,12 +323,15 @@ module isHitTester ();
   isHit IsHit(.*);
 
   initial begin
-    $monitor($time, " X = %d, Y %d,Hit = %b, nearMiss = %b, Miss = %b, BiggestShipHit = %b", 
+    $monitor($time, " X = %d, Y %d, Hit = %b, nearMiss = %b, Miss = %b, BiggestShipHit = %b", 
              X, Y, Hit, nearMiss, Miss, BiggestShipHit);
     X = 4'b0001;
-    Y = 4'b0001;
-    #10 Y = 4'b0010;
-    #10 X = 4'b1001;
+    Y = 4'b0001; //nearMiss
+    #10 Y = 4'b0010; //Hit Battleship
+    #10 X = 4'b1001; //nearMiss
+    #10 Y = 4'b0001; //Hit Patrol
+    #10 X = 4'b1010;
+    Y = 4'b1010; //Miss
     #10 $finish;
   end
 

@@ -17,9 +17,10 @@ PRODUCT=$(PRODUCTBASE)
 PRODUCT_TIMESTAMP=product_timestamp
 
 # Path to runtime library
+
 DEPLIBS=
 VCSUCLI=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsucli.so
-RUNTIME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsnew.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libuclinative.so $(DEPLIBS) 
+RUNTIME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsnew.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libuclinative.so $(DEPLIBS) 
 
 VCS_SAVE_RESTORE_OBJ=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
 
@@ -47,7 +48,7 @@ CRT0=
 # C run time startup
 CRTN=
 # Machine specific libraries
-SYSLIBS=-ldl -lm  -lc -lpthread -ldl
+SYSLIBS=-ldl  -lc -lm -lpthread -ldl
 
 # Default defines
 SHELL=/bin/sh
@@ -70,8 +71,12 @@ CFLAGS_CG=-w  -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include -O
 LD_PARTIAL_LOADER=ld
 # Partial linking
 LD_PARTIAL=$(LD_PARTIAL_LOADER) -r -o
+
+AR=ar
 ASFLAGS=
-LIBS=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libzerosoft_rt_stubs.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so 
+LIBS=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libzerosoft_rt_stubs.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so 
+DOTLIBS=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libzerosoft_rt_stubs.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so 
+
 # Note: if make gives you errors about include, either get gmake, or
 # replace the following line with the contents of the file filelist,
 # EACH TIME IT CHANGES

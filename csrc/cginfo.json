@@ -1,63 +1,9 @@
 {
     "MlibObjs": {},
-    "PrevCompiledModules": {},
-    "LVLData": [
-        "SIM"
-    ],
     "NameTable": {
-        "isHit": [
-            "isHit",
-            "TsN5M",
-            "module"
-        ],
-        "shiphit_test": [
-            "shiphit_test",
-            "TbST5",
-            "module"
-        ],
-        "isWrong": [
-            "isWrong",
-            "hvMcZ",
-            "module"
-        ],
-        "shipHit": [
-            "shipHit",
-            "LKbQB",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
-            "module"
-        ],
-        "typeMiss": [
-            "typeMiss",
-            "c4W1f",
-            "module"
-        ],
-        "BCDtoSevenSegment": [
-            "BCDtoSevenSegment",
-            "kuSVi",
-            "module"
-        ],
-        "isWrongTester": [
-            "isWrongTester",
-            "ahaet",
-            "module"
-        ],
-        "BCDtoSevenSegment_test": [
-            "BCDtoSevenSegment_test",
-            "ggRx6",
-            "module"
-        ],
-        "isBomb": [
-            "isBomb",
-            "SA3Kx",
-            "module"
-        ],
-        "typeMissTester": [
-            "typeMissTester",
-            "d9GSv",
             "module"
         ],
         "isHitTester": [
@@ -71,42 +17,64 @@
             "module"
         ]
     },
-    "CurCompileUdps": {},
-    "CompileStrategy": "fullobj",
-    "Misc": {
-        "daidir": "simv.daidir",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
-        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
-        "csrc": "csrc",
-        "archive_dir": "archive.1",
-        "default_output_dir": "csrc",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir"
-    },
-    "PEModules": [],
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 95866
-    },
-    "stat": {
-        "nMops": 4914
-    },
     "CurCompileModules": [
         "...MASTER...",
         "std",
-        "isWrong",
-        "isWrongTester",
-        "BCDtoSevenSegment",
-        "BCDtoSevenSegment_test",
-        "typeMiss",
-        "typeMissTester",
-        "shipHit",
-        "shiphit_test",
-        "isHit",
-        "isHitTester",
-        "isBomb"
+        "isHitTester"
     ],
+    "CompileStrategy": "fullobj",
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 34314,
+                "mod": "std",
+                "archive": "archive.11/_55816_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "isHitTester": {
+            "azIL0_d": {
+                "mode": 4,
+                "bytes": 12798,
+                "mod": "isHitTester",
+                "archive": "archive.11/_55816_archive_1.a",
+                "out": "azIL0_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 8854,
+                "mod": "...MASTER...",
+                "archive": "archive.11/_55816_archive_1.a",
+                "out": "amcQw_d.o"
+            }
+        }
+    },
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 63835
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
     "CompileProcesses": [
-        "cgproc.261098.json"
+        "cgproc.55816.json"
     ],
-    "CompileStatus": "Successful"
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.11"
+    },
+    "CompileStatus": "Successful",
+    "stat": {
+        "nMops": 1252
+    }
 }

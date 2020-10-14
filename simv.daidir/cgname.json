@@ -1,57 +1,7 @@
 {
-    "isHit": [
-        "isHit",
-        "TsN5M",
-        "module"
-    ],
-    "shiphit_test": [
-        "shiphit_test",
-        "TbST5",
-        "module"
-    ],
-    "isWrong": [
-        "isWrong",
-        "hvMcZ",
-        "module"
-    ],
-    "shipHit": [
-        "shipHit",
-        "LKbQB",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
-        "module"
-    ],
-    "typeMiss": [
-        "typeMiss",
-        "c4W1f",
-        "module"
-    ],
-    "BCDtoSevenSegment": [
-        "BCDtoSevenSegment",
-        "kuSVi",
-        "module"
-    ],
-    "isWrongTester": [
-        "isWrongTester",
-        "ahaet",
-        "module"
-    ],
-    "BCDtoSevenSegment_test": [
-        "BCDtoSevenSegment_test",
-        "ggRx6",
-        "module"
-    ],
-    "isBomb": [
-        "isBomb",
-        "SA3Kx",
-        "module"
-    ],
-    "typeMissTester": [
-        "typeMissTester",
-        "d9GSv",
         "module"
     ],
     "isHitTester": [

@@ -1,0 +1,56 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "isHitTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "azIL0_d": {
+            "mod": "isHitTester",
+            "archive": "archive.11/_55816_archive_1.a",
+            "out": "azIL0_d.o",
+            "mode": 4,
+            "bytes": 21545
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "archive": "archive.11/_55816_archive_1.a",
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "bytes": 7336
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "archive": "archive.11/_55816_archive_1.a",
+            "out": "reYIK_d.o",
+            "mode": 4,
+            "bytes": 29004
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.11/_55816_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "reYIK_d.o",
+                    29004
+                ],
+                [
+                    "azIL0_d.o",
+                    21545
+                ]
+            ],
+            "size": 57885
+        }
+    ]
+}

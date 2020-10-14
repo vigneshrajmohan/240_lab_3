@@ -1,144 +1,140 @@
 {
-<<<<<<< HEAD
-    "MlibObjs": {},
-    "PrevCompiledModules": {
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 7336,
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "mode": 4,
-                "archive": "archive.35/_258051_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "mod": "std",
-                "mode": 4,
-                "archive": "archive.35/_prev_archive_1.a",
-                "out": "reYIK_d.o"
-            }
-        }
-    },
-    "LVLData": [
-        "SIM"
-    ],
-=======
-    "CompileStatus": "Successful",
     "MlibObjs": {},
     "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "CompileStatus": "Successful",
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
                 "bytes": 29004,
                 "mod": "std",
-                "out": "reYIK_d.o",
                 "mode": 4,
-                "archive": "archive.28/_24542_archive_1.a"
+                "out": "reYIK_d.o",
+                "archive": "archive.10/_55193_archive_1.a"
             }
         },
-        "shiphit_test": {
-            "TbST5_d": {
-                "bytes": 18146,
-                "mod": "shiphit_test",
-                "out": "TbST5_d.o",
+        "isHitTester": {
+            "azIL0_d": {
+                "bytes": 21254,
+                "mod": "isHitTester",
                 "mode": 4,
-                "archive": "archive.28/_24542_archive_1.a"
+                "out": "azIL0_d.o",
+                "archive": "archive.10/_55193_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
                 "bytes": 7336,
                 "mod": "...MASTER...",
+                "archive": "archive.10/_55193_archive_1.a",
                 "out": "amcQw_d.o",
-                "mode": 4,
-                "archive": "archive.28/_24542_archive_1.a"
+                "mode": 4
             }
         }
     },
-    "PEModules": [],
->>>>>>> 1f5b7b439baa21c55ac80bd29ade0b01e3773232
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "isWrong",
+        "isWrongTester",
+        "BCDtoSevenSegment",
+        "BCDtoSevenSegment_test",
+        "typeMiss",
+        "typeMissTester",
+        "shipHit",
+        "shiphit_test",
+        "isHit",
+        "isHitTester",
+        "isBomb"
+    ],
+    "Misc": {
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
+        "archive_dir": "archive.10",
+        "default_output_dir": "csrc"
+    },
     "NameTable": {
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-<<<<<<< HEAD
-        "isHitTester": [
-            "isHitTester",
-            "azIL0",
-=======
         "...MASTER...": [
             "SIM",
             "amcQw",
->>>>>>> 1f5b7b439baa21c55ac80bd29ade0b01e3773232
+            "module"
+        ],
+        "isWrong": [
+            "isWrong",
+            "hvMcZ",
+            "module"
+        ],
+        "shipHit": [
+            "shipHit",
+            "LKbQB",
             "module"
         ],
         "shiphit_test": [
             "shiphit_test",
             "TbST5",
             "module"
+        ],
+        "isWrongTester": [
+            "isWrongTester",
+            "ahaet",
+            "module"
+        ],
+        "BCDtoSevenSegment": [
+            "BCDtoSevenSegment",
+            "kuSVi",
+            "module"
+        ],
+        "typeMiss": [
+            "typeMiss",
+            "c4W1f",
+            "module"
+        ],
+        "BCDtoSevenSegment_test": [
+            "BCDtoSevenSegment_test",
+            "ggRx6",
+            "module"
+        ],
+        "isHitTester": [
+            "isHitTester",
+            "azIL0",
+            "module"
+        ],
+        "typeMissTester": [
+            "typeMissTester",
+            "d9GSv",
+            "module"
+        ],
+        "isHit": [
+            "isHit",
+            "TsN5M",
+            "module"
+        ],
+        "isBomb": [
+            "isBomb",
+            "SA3Kx",
+            "module"
         ]
     },
-<<<<<<< HEAD
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 63065
-=======
-    "Misc": {
-        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
-        "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
-        "daidir": "simv.daidir",
-        "csrc": "csrc",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
-        "archive_dir": "archive.28",
-        "default_output_dir": "csrc"
+        "bytes": 96142
     },
     "LVLData": [
         "SIM"
     ],
-    "CurCompileUdps": {},
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 61558
->>>>>>> 1f5b7b439baa21c55ac80bd29ade0b01e3773232
-    },
-    "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER...",
-        "isHitTester"
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.55193.json"
     ],
     "stat": {
-<<<<<<< HEAD
-        "nMops": 924
-    },
-    "PEModules": [],
-    "Misc": {
-        "archive_dir": "archive.35",
-        "daidir": "simv.daidir",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
-        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
-        "csrc": "csrc",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
-        "default_output_dir": "csrc"
-    },
-    "CompileProcesses": [
-        "cgproc.258051.json"
-    ],
-    "CompileStatus": "Successful"
-=======
-        "nMops": 919
-    },
-    "CompileProcesses": [
-        "cgproc.24542.json"
-    ]
->>>>>>> 1f5b7b439baa21c55ac80bd29ade0b01e3773232
+        "nMops": 4911
+    }
 }
