@@ -455,3 +455,72 @@ module isBombTester ();
   end
 
 endmodule: isBombTester
+
+
+module ChipInterface
+  (output logic [6:0] HEX9, HEX7, HEX6,
+  output logic [17:0] LEDR, 
+  output logic [7:0] LEDG,
+  input logic [17:0] SW, 
+  input logic [7:0] KEY);
+
+  logic [3:0] X, Y;
+  logic [1:0] BigLeft;
+  logic Big, ScoreThis;
+  logic [6:0] numHits;
+  logic [4:0] BiggestShipHit;
+  logic Hit, nearMiss, Miss, SomethingIsWrong;
+
+
+  isBomb bomb(.*);
+
+  assign HEX9 = numHits;
+  assign HEX6[0] = !SomethingIsWrong;
+  assign HEX6[1] = !SomethingIsWrong;
+  assign HEX6[2] = !SomethingIsWrong;
+  assign HEX6[3] = !SomethingIsWrong;
+  assign HEX6[4] = !SomethingIsWrong;
+  assign HEX6[5] = !SomethingIsWrong;
+  assign HEX6[6] = !SomethingIsWrong;
+
+  assign HEX7[0] = !SomethingIsWrong;
+  assign HEX7[1] = !SomethingIsWrong;
+  assign HEX7[2] = !SomethingIsWrong;
+  assign HEX7[3] = !SomethingIsWrong;
+  assign HEX7[4] = !SomethingIsWrong;
+  assign HEX7[5] = !SomethingIsWrong;
+  assign HEX7[6] = !SomethingIsWrong;
+
+  assign LEDG[4:0] = BiggestShipHit;
+  assign LEDR[0] = Miss;
+  assign LEDR[1] = Miss;
+  assign LEDR[2] = Miss;
+  assign LEDR[3] = Miss;
+  assign LEDR[4] = Miss;
+  assign LEDR[5] = Miss;
+
+  assign LEDR[6] = nearMiss;
+  assign LEDR[7] = nearMiss;
+  assign LEDR[8] = nearMiss;
+  assign LEDR[9] = nearMiss;
+  assign LEDR[10] = nearMiss;
+  assign LEDR[11] = nearMiss;
+
+  assign LEDR[12] = Hit;
+  assign LEDR[13] = Hit;
+  assign LEDR[14] = Hit;
+  assign LEDR[15] = Hit;
+  assign LEDR[16] = Hit;
+  assign LEDR[17] = Hit;
+
+  assign  BigLeft[0] = SW[14];
+  assign  BigLeft[1] = SW[15];
+  assign  Big = SW[17];
+
+  assign ScoreThis = KEY[4];
+  assign X[3:0] = SW[7:4];
+  assign Y[3:0] = SW[3:0];
+
+  // Some connecting signals and other code here
+// Instantiate your main module Battleship b(.X, .Y, ...);
+endmodule : ChipInterface

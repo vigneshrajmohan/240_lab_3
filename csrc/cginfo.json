@@ -1,73 +1,123 @@
 {
-    "CompileProcesses": [
-        "cgproc.6661.json"
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "isWrong",
+        "isWrongTester",
+        "BCDtoSevenSegment",
+        "BCDtoSevenSegment_test",
+        "typeMiss",
+        "typeMissTester",
+        "shipHit",
+        "shiphit_test",
+        "isHit",
+        "isHitTester",
+        "isBomb",
+        "isBombTester",
+        "ChipInterface"
     ],
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 64077
-    },
     "MlibObjs": {},
     "PrevCompiledModules": {
-        "isBombTester": {
-            "D8jRU_d": {
-                "bytes": 38773,
-                "mod": "isBombTester",
-                "out": "D8jRU_d.o",
-                "mode": 4,
-                "archive": "archive.17/_6661_archive_1.a"
-            }
-        },
         "isHit": {
             "TsN5M_d": {
-                "bytes": 12618,
+                "mode": 4,
+                "bytes": 18032,
                 "mod": "isHit",
                 "out": "TsN5M_d.o",
-                "mode": 4,
-                "archive": "archive.17/_6661_archive_1.a"
+                "archive": "archive.18/_3755_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
-                "bytes": 34314,
+                "mode": 4,
+                "bytes": 29004,
                 "mod": "std",
                 "out": "reYIK_d.o",
-                "mode": 4,
-                "archive": "archive.17/_6661_archive_1.a"
+                "archive": "archive.18/_3755_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "bytes": 8118,
+                "mode": 4,
+                "bytes": 7336,
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
+                "archive": "archive.18/_3755_archive_1.a"
+            }
+        },
+        "isBombTester": {
+            "D8jRU_d": {
                 "mode": 4,
-                "archive": "archive.17/_6661_archive_1.a"
+                "bytes": 31398,
+                "mod": "isBombTester",
+                "out": "D8jRU_d.o",
+                "archive": "archive.18/_3755_archive_1.a"
             }
         }
     },
-    "CurCompileUdps": {},
-    "LVLData": [
-        "SIM"
-    ],
-    "Misc": {
-        "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
-        "csrc": "csrc",
-        "archive_dir": "archive.17",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
-        "daidir": "simv.daidir",
-        "default_output_dir": "csrc"
-    },
-    "CurCompileModules": [
-        "...MASTER...",
-        "std",
-        "isBombTester",
-        "isHit"
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.3755.json"
     ],
     "NameTable": {
         "std": [
             "std",
             "reYIK",
+            "module"
+        ],
+        "typeMissTester": [
+            "typeMissTester",
+            "d9GSv",
+            "module"
+        ],
+        "isHitTester": [
+            "isHitTester",
+            "azIL0",
+            "module"
+        ],
+        "typeMiss": [
+            "typeMiss",
+            "c4W1f",
+            "module"
+        ],
+        "isWrong": [
+            "isWrong",
+            "hvMcZ",
+            "module"
+        ],
+        "BCDtoSevenSegment_test": [
+            "BCDtoSevenSegment_test",
+            "ggRx6",
+            "module"
+        ],
+        "ChipInterface": [
+            "ChipInterface",
+            "VHM6x",
+            "module"
+        ],
+        "isWrongTester": [
+            "isWrongTester",
+            "ahaet",
+            "module"
+        ],
+        "shipHit": [
+            "shipHit",
+            "LKbQB",
+            "module"
+        ],
+        "BCDtoSevenSegment": [
+            "BCDtoSevenSegment",
+            "kuSVi",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "shiphit_test": [
+            "shiphit_test",
+            "TbST5",
             "module"
         ],
         "isHit": [
@@ -80,16 +130,32 @@
             "D8jRU",
             "module"
         ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
+        "isBomb": [
+            "isBomb",
+            "SA3Kx",
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 64349
+    },
+    "Misc": {
+        "archive_dir": "archive.18",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/simv.daidir",
+        "cwd": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3/csrc",
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir"
+    },
+    "LVLData": [
+        "SIM"
+    ],
     "PEModules": [],
     "stat": {
-        "nMops": 3175
+        "nMops": 5611
     },
     "CompileStatus": "Successful"
 }

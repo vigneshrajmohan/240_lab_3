@@ -1,11 +1,5 @@
 0 
-29
-+cli+4
-+itf+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
-+memcbk
-+vcsd
-+vpi
-+vpi
+21
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -19,31 +13,28 @@
 -Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
 -Mout=simv
 -Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
--Msyslibs=-ldl -lm
+-Msyslibs=-ldl
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
--Xcbug=0x1
--debug=3
 -gen_obj
 -picarchive
 -sverilog
 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
 code.sv
-60
-sysc_uni_pwd=/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3
+57
+sysc_uni_pwd=/afs/andrew.cmu.edu/usr2/vrajmoha/private/18240/lab3/240_lab_3
 no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
 https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
-XDG_SESSION_ID=8375
-XDG_RUNTIME_DIR=/run/user/2659157
-XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr19/jrager/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-VSCODE_IPC_HOOK_CLI=/run/user/2659157/vscode-ipc-b86ea126-b1df-4144-ba3a-4eed0d3004fe.sock
-VSCODE_GIT_IPC_HANDLE=/run/user/2659157/vscode-git-6f208b02d7.sock
-VSCODE_GIT_ASKPASS_NODE=/afs/andrew.cmu.edu/usr19/jrager/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/node
-VSCODE_GIT_ASKPASS_MAIN=/afs/andrew.cmu.edu/usr19/jrager/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass-main.js
+XDG_SESSION_ID=9820
+XDG_RUNTIME_DIR=/run/user/2653287
+XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr2/vrajmoha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_IPC_HOOK_CLI=/run/user/2653287/vscode-ipc-d741dabb-494c-45fa-8523-3d5b0e30ffa9.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/2653287/vscode-git-68c9fd3e91.sock
+VSCODE_GIT_ASKPASS_NODE=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/node
+VSCODE_GIT_ASKPASS_MAIN=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass-main.js
 VMR_MODE_FLAG=32
-VERBOSE_LOGGING=true
 VCS_TARGET_ARCH=amd64
 VCS_MX_HOME_INTERNAL=1
 VCS_MODE_FLAG=64
@@ -59,8 +50,8 @@ TERM_PROGRAM_VERSION=1.50.0
 TERM_PROGRAM=vscode
 SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
 SYNOPSYS=/usr/local/synopsys
-SSH_CONNECTION=172.31.61.33 50021 172.19.136.194 22
-SSH_CLIENT=172.31.61.33 50021 22
+SSH_CONNECTION=172.31.74.51 58383 172.19.137.178 22
+SSH_CLIENT=172.31.74.51 58383 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SCRNAME=vcs
 SCRIPT_NAME=vcs
@@ -70,33 +61,30 @@ QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
-PIPE_LOGGING=true
 OVA_UUM=0
 NO_PROXY=localhost,127.0.0.1,.cmu.edu,.cmu.local
 MODULESHOME=/usr/share/Modules
 MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=KEYRING:persistent:2659157
+KRB5CCNAME=KEYRING:persistent:2653287
 KDEDIRS=/usr
 HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
 HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
 HISTCONTROL=ignoredups
-GIT_ASKPASS=/afs/andrew.cmu.edu/usr19/jrager/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass.sh
+GIT_ASKPASS=/afs/andrew.cmu.edu/usr2/vrajmoha/.vscode-server/bin/93c2f0fbf16c5a4b10e4d5f89737d9c2c25488a3/extensions/git/dist/askpass.sh
 FTP_PROXY=http://proximus.ece.cmu.edu:3128/
 DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
 CVS_RSH=ssh
 COLORTERM=truecolor
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
-AMD_ENTRYPOINT=vs/server/remoteExtensionHostProcess
 AKLOG=/usr/bin/aklog
 0
-2
-1602691857 code.sv
-1440743823 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
+1
+1602710065 code.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1602691860 simv.daidir
+1602710117 simv.daidir

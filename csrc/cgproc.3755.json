@@ -1,0 +1,236 @@
+{
+    "Modules": {
+        "shiphit_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 9
+        },
+        "typeMissTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isHitTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "typeMiss": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isWrong": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "BCDtoSevenSegment_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "ChipInterface": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isWrongTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "BCDtoSevenSegment": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "shipHit": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "isHit": {
+            "Compiled": "Yes",
+            "Compiled Times": 7
+        },
+        "isBombTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 7
+        },
+        "isBomb": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "bytes": 9124,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "ahaet_d": {
+            "mod": "isWrongTester",
+            "out": "ahaet_d.o",
+            "mode": 4,
+            "bytes": 12932,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "kuSVi_d": {
+            "mod": "BCDtoSevenSegment",
+            "out": "kuSVi_d.o",
+            "mode": 4,
+            "bytes": 8873,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "mode": 4,
+            "bytes": 29004,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "hvMcZ_d": {
+            "mod": "isWrong",
+            "out": "hvMcZ_d.o",
+            "mode": 4,
+            "bytes": 10515,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "ggRx6_d": {
+            "mod": "BCDtoSevenSegment_test",
+            "out": "ggRx6_d.o",
+            "mode": 4,
+            "bytes": 9984,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "d9GSv_d": {
+            "mod": "typeMissTester",
+            "out": "d9GSv_d.o",
+            "mode": 4,
+            "bytes": 11433,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "c4W1f_d": {
+            "mod": "typeMiss",
+            "out": "c4W1f_d.o",
+            "mode": 4,
+            "bytes": 10093,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "LKbQB_d": {
+            "mod": "shipHit",
+            "out": "LKbQB_d.o",
+            "mode": 4,
+            "bytes": 12446,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "TbST5_d": {
+            "mod": "shiphit_test",
+            "out": "TbST5_d.o",
+            "mode": 4,
+            "bytes": 10506,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "TsN5M_d": {
+            "mod": "isHit",
+            "out": "TsN5M_d.o",
+            "mode": 4,
+            "bytes": 10425,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "azIL0_d": {
+            "mod": "isHitTester",
+            "out": "azIL0_d.o",
+            "mode": 4,
+            "bytes": 11387,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "SA3Kx_d": {
+            "mod": "isBomb",
+            "out": "SA3Kx_d.o",
+            "mode": 4,
+            "bytes": 21654,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "D8jRU_d": {
+            "mod": "isBombTester",
+            "out": "D8jRU_d.o",
+            "mode": 4,
+            "bytes": 13148,
+            "archive": "archive.18/_3755_archive_1.a"
+        },
+        "VHM6x_d": {
+            "mod": "ChipInterface",
+            "out": "VHM6x_d.o",
+            "mode": 4,
+            "bytes": 11657,
+            "archive": "archive.18/_3755_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 193181,
+            "archive": "archive.18/_3755_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9124
+                ],
+                [
+                    "reYIK_d.o",
+                    29004
+                ],
+                [
+                    "hvMcZ_d.o",
+                    10515
+                ],
+                [
+                    "ahaet_d.o",
+                    12932
+                ],
+                [
+                    "kuSVi_d.o",
+                    8873
+                ],
+                [
+                    "ggRx6_d.o",
+                    9984
+                ],
+                [
+                    "c4W1f_d.o",
+                    10093
+                ],
+                [
+                    "d9GSv_d.o",
+                    11433
+                ],
+                [
+                    "LKbQB_d.o",
+                    12446
+                ],
+                [
+                    "TbST5_d.o",
+                    10506
+                ],
+                [
+                    "TsN5M_d.o",
+                    10425
+                ],
+                [
+                    "azIL0_d.o",
+                    11387
+                ],
+                [
+                    "SA3Kx_d.o",
+                    21654
+                ],
+                [
+                    "D8jRU_d.o",
+                    13148
+                ],
+                [
+                    "VHM6x_d.o",
+                    11657
+                ]
+            ]
+        }
+    ]
+}

@@ -4,6 +4,61 @@
         "reYIK",
         "module"
     ],
+    "typeMissTester": [
+        "typeMissTester",
+        "d9GSv",
+        "module"
+    ],
+    "isHitTester": [
+        "isHitTester",
+        "azIL0",
+        "module"
+    ],
+    "typeMiss": [
+        "typeMiss",
+        "c4W1f",
+        "module"
+    ],
+    "isWrong": [
+        "isWrong",
+        "hvMcZ",
+        "module"
+    ],
+    "BCDtoSevenSegment_test": [
+        "BCDtoSevenSegment_test",
+        "ggRx6",
+        "module"
+    ],
+    "ChipInterface": [
+        "ChipInterface",
+        "VHM6x",
+        "module"
+    ],
+    "isWrongTester": [
+        "isWrongTester",
+        "ahaet",
+        "module"
+    ],
+    "shipHit": [
+        "shipHit",
+        "LKbQB",
+        "module"
+    ],
+    "BCDtoSevenSegment": [
+        "BCDtoSevenSegment",
+        "kuSVi",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "shiphit_test": [
+        "shiphit_test",
+        "TbST5",
+        "module"
+    ],
     "isHit": [
         "isHit",
         "TsN5M",
@@ -14,9 +69,9 @@
         "D8jRU",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "isBomb": [
+        "isBomb",
+        "SA3Kx",
         "module"
     ]
 }
