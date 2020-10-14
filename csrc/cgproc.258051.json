@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "std": {},
+        "...MASTER...": {},
+        "isHitTester": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4,
+            "archive": "archive.35/_258051_archive_1.a"
+        },
+        "azIL0_d": {
+            "mod": "isHitTester",
+            "out": "azIL0_d.o",
+            "bytes": 21254,
+            "mode": 4,
+            "archive": "archive.35/_258051_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.35/_258051_archive_1.a",
+            "size": 28590,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "azIL0_d.o",
+                    21254
+                ]
+            ]
+        }
+    ]
+}

@@ -1,31 +1,27 @@
 {
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
     "MlibObjs": {},
+    "CurCompileUdps": {},
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
-                "mode": 4,
                 "bytes": 29004,
                 "mod": "std",
-                "out": "reYIK_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
+                "mode": 4,
+                "archive": "archive.34/_prev_archive_1.a",
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "mode": 4,
                 "bytes": 7336,
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
-            }
-        },
-        "shiphit_test": {
-            "TbST5_d": {
                 "mode": 4,
-                "bytes": 18134,
-                "mod": "shiphit_test",
-                "out": "TbST5_d.o",
-                "archive": "archive.26/_233356_archive_1.a"
+                "archive": "archive.34/_257524_archive_1.a"
             }
         }
     },
@@ -35,100 +31,40 @@
             "reYIK",
             "module"
         ],
-        "BCDtoSevenSegment": [
-            "BCDtoSevenSegment",
-            "kuSVi",
-            "module"
-        ],
-        "typeMissTester": [
-            "typeMissTester",
-            "d9GSv",
-            "module"
-        ],
-        "isWrongTester": [
-            "isWrongTester",
-            "ahaet",
-            "module"
-        ],
-        "isWrong": [
-            "isWrong",
-            "hvMcZ",
+        "shiphit_test": [
+            "shiphit_test",
+            "TbST5",
             "module"
         ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
-        ],
-        "BCDtoSevenSegment_test": [
-            "BCDtoSevenSegment_test",
-            "ggRx6",
-            "module"
-        ],
-        "typeMiss": [
-            "typeMiss",
-            "c4W1f",
-            "module"
-        ],
-        "shipHit": [
-            "shipHit",
-            "LKbQB",
-            "module"
-        ],
-        "shiphit_test": [
-            "shiphit_test",
-            "TbST5",
-            "module"
-        ],
-        "isHitTester": [
-            "isHitTester",
-            "azIL0",
-            "module"
-        ],
-        "isBomb": [
-            "isBomb",
-            "SA3Kx",
-            "module"
         ]
     },
-    "CompileStatus": "Successful",
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "nMops": 3285
-    },
+    "CompileProcesses": [
+        "cgproc.257524.json"
+    ],
     "PEModules": [],
-    "CurCompileUdps": {},
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 62862
+        "bytes": 63073
     },
     "CurCompileModules": [
         "...MASTER...",
-        "std",
-        "isWrong",
-        "isWrongTester",
-        "BCDtoSevenSegment",
-        "BCDtoSevenSegment_test",
-        "typeMiss",
-        "typeMissTester",
-        "shipHit",
-        "shiphit_test",
-        "isHitTester",
-        "isBomb"
-    ],
-    "CompileProcesses": [
-        "cgproc.233356.json"
-    ],
-    "LVLData": [
-        "SIM"
+        "shiphit_test"
     ],
     "Misc": {
-        "archive_dir": "archive.26",
-        "default_output_dir": "csrc",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
         "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
         "csrc": "csrc",
         "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
-        "daidir": "simv.daidir"
-    }
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.34"
+    },
+    "stat": {
+        "nMops": 633
+    },
+    "CompileStatus": "Successful"
 }

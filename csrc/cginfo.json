@@ -1,80 +1,70 @@
 {
-    "CompileStrategy": "fullobj",
-    "CompileProcesses": [
-        "cgproc.233950.json"
-    ],
     "MlibObjs": {},
-    "stat": {
-        "nMops": 1161
-    },
     "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7336,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.35/_258051_archive_1.a"
+            }
+        },
         "std": {
             "reYIK_d": {
                 "bytes": 29004,
-                "archive": "archive.27/_233950_archive_1.a",
                 "mod": "std",
-                "out": "reYIK_d.o",
-                "mode": 4
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 8854,
-                "archive": "archive.27/_233950_archive_1.a",
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "mode": 4
-            }
-        },
-        "shiphit_test": {
-            "TbST5_d": {
-                "bytes": 11306,
-                "archive": "archive.27/_233950_archive_1.a",
-                "mod": "shiphit_test",
-                "out": "TbST5_d.o",
-                "mode": 4
+                "mode": 4,
+                "archive": "archive.35/_prev_archive_1.a",
+                "out": "reYIK_d.o"
             }
         }
     },
+    "LVLData": [
+        "SIM"
+    ],
     "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "shiphit_test": [
-            "shiphit_test",
-            "TbST5",
-            "module"
-        ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
+        "isHitTester": [
+            "isHitTester",
+            "azIL0",
             "module"
         ]
     },
-    "CurCompileUdps": {},
-    "LVLData": [
-        "SIM"
-    ],
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 62782
+        "bytes": 63065
     },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "std",
-        "shiphit_test"
+        "isHitTester"
     ],
+    "stat": {
+        "nMops": 924
+    },
     "PEModules": [],
     "Misc": {
-        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
+        "archive_dir": "archive.35",
         "daidir": "simv.daidir",
-        "csrc": "csrc",
-        "default_output_dir": "csrc",
         "csrc_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/csrc",
+        "cwd": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3",
+        "csrc": "csrc",
         "daidir_abs": "/afs/andrew.cmu.edu/usr19/jrager/private/18240/Lab3/240_lab_3/simv.daidir",
-        "archive_dir": "archive.27"
+        "default_output_dir": "csrc"
     },
+    "CompileProcesses": [
+        "cgproc.258051.json"
+    ],
     "CompileStatus": "Successful"
 }

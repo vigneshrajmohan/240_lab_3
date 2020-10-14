@@ -190,7 +190,6 @@ endmodule: typeMissTester
 
 module shipHit
     (input logic [3:0] X, Y,
-     input logic [4:0] CurrBiggest,
      output logic [4:0] BiggestShipHit);
 
     logic patrol1, patrol2, battleship, aircraft_c, sub, cruiser;
@@ -246,11 +245,11 @@ module shipHit
 
     always_comb begin 
         if (aircraft_c) BiggestShipHit = 5'b10000;
-        else if (battleship && !(CurrBiggest == 5'b10000)) BiggestShipHit = 5'b01000;
-        else if (cruiser && (!(CurrBiggest == 5'b01000) || !(CurrBiggest == 5'b10000))) BiggestShipHit = 5'b00100;
-        else if (sub && (CurrBiggest == 5'b00000 || CurrBiggest == 5'b00001)) BiggestShipHit = 5'b00010;
-        else if ((patrol1 || patrol2) && CurrBiggest == 5'b00000) BiggestShipHit = 5'b00001;
-        else BiggestShipHit = CurrBiggest;
+        else if (battleship) BiggestShipHit = 5'b01000;
+        else if (cruiser) BiggestShipHit = 5'b00100;
+        else if (sub) BiggestShipHit = 5'b00010;
+        else if (patrol1 || patrol2) BiggestShipHit = 5'b00001;
+        else BiggestShipHit = 5'b00000;
     end
 
 endmodule: shipHit
@@ -264,13 +263,13 @@ module shiphit_test();
     shipHit dut (.*);
 
   initial begin
-    $monitor("X: %h, Y: %h, CurrBiggest: %b BiggestShip: %b", X, Y, CurrBiggest, BiggestShipHit);
-       X = 4'b0011; Y = 4'b0011; CurrBiggest = 5'b00000;
-    #5 X = 4'b0011; Y = 4'b0010; CurrBiggest = 5'b10000;
-    #5 X = 4'b0011; Y = 4'b0010; CurrBiggest = 5'b00000;
+    $monitor("X: %d, Y: %d, BiggestShip: %b", X, Y, BiggestShipHit);
+       X = 4'b0011; Y = 4'b0011;
+    #5 X = 4'b0011; Y = 4'b0010;
+    #5 X = 4'b0011; Y = 4'b0010;
     #5 X = 4'b0100; Y = 4'b0001;
-    #5 X = 4'b0010; Y = 4'b1001; CurrBiggest = 5'b01000;
-    #5 X = 4'b0010; Y = 4'b1001; CurrBiggest = 5'b00000;
+    #5 X = 4'b0010; Y = 4'b1001;
+    #5 X = 4'b0010; Y = 4'b1001;
     #5 X = 4'b0111; Y = 4'b0110;
     #5 X = 4'b1001; Y = 4'b0001;
     #5 X = 4'b0001; Y = 4'b0001;
@@ -284,15 +283,8 @@ endmodule : shiphit_test
 
 module isHit
   (input logic [3:0] X, Y,
-   input logic [3:0] CurrHits,
-   input logic [4:0] CurrBiggest,
-   input logic HasHit,
   output logic Hit, nearMiss, Miss,
-  output logic [4:0] BiggestShipHit,
-  output logic [3:0] TotalHits,
-  output logic [6:0] numHits);
-
-  logic ThisHits;
+  output logic [4:0] BiggestShipHit);
  
   typeMiss TypeMiss(.*);
 
@@ -300,60 +292,45 @@ module isHit
 
   always_comb begin
     unique case({X, Y})
-      8'b0001_0010: ThisHits = 1'b1;
-      8'b0010_0001: ThisHits = 1'b1;
-      8'b0010_0010: ThisHits = 1'b1;
-      8'b0010_0011: ThisHits = 1'b1;
-      8'b0010_1000: ThisHits = 1'b1;
-      8'b0010_1001: ThisHits = 1'b1;
-      8'b0010_1010: ThisHits = 1'b1;
-      8'b0011_0001: ThisHits = 1'b1;
-      8'b0011_0010: ThisHits = 1'b1;
-      8'b0011_0011: ThisHits = 1'b1;
-      8'b0100_0001: ThisHits = 1'b1;
-      8'b0100_0010: ThisHits = 1'b1;
-      8'b0100_0011: ThisHits = 1'b1;
-      8'b0101_0011: ThisHits = 1'b1;
-      8'b0110_0011: ThisHits = 1'b1;
-      8'b0111_0110: ThisHits = 1'b1;
-      8'b1000_0110: ThisHits = 1'b1;
-      8'b1001_0001: ThisHits = 1'b1;
-      8'b1010_0001: ThisHits = 1'b1;
-      default: ThisHits = 1'b0;
+      8'b0001_0010: Hit = 1'b1;
+      8'b0010_0001: Hit = 1'b1;
+      8'b0010_0010: Hit = 1'b1;
+      8'b0010_0011: Hit = 1'b1;
+      8'b0010_1000: Hit = 1'b1;
+      8'b0010_1001: Hit = 1'b1;
+      8'b0010_1010: Hit = 1'b1;
+      8'b0011_0001: Hit = 1'b1;
+      8'b0011_0010: Hit = 1'b1;
+      8'b0011_0011: Hit = 1'b1;
+      8'b0100_0001: Hit = 1'b1;
+      8'b0100_0010: Hit = 1'b1;
+      8'b0100_0011: Hit = 1'b1;
+      8'b0101_0011: Hit = 1'b1;
+      8'b0110_0011: Hit = 1'b1;
+      8'b0111_0110: Hit = 1'b1;
+      8'b1000_0110: Hit = 1'b1;
+      8'b1001_0001: Hit = 1'b1;
+      8'b1010_0001: Hit = 1'b1;
+      default: Hit = 1'b0;
     endcase
-    if (Hit) TotalHits[3:0] = CurrHits[3:0] + 1;
-    else TotalHits[3:0] = CurrHits[3:0];
   end
-
-  assign Hit = HasHit || ThisHits;
-
-  BCDtoSevenSegment BCD2SevenSegment(.*);
 
 endmodule: isHit
 
 module isHitTester ();
-  logic [3:0] X, Y, CurrHits;
-  logic Hit, nearMiss, Miss, HasHit;
-  logic [4:0] BiggestShipHit, CurrBiggest;
-  logic [3:0] TotalHits;
-  logic [6:0] numHits;
+  logic [3:0] X, Y;
+  logic Hit, nearMiss, Miss;
+  logic [4:0] BiggestShipHit;
 
   isHit IsHit(.*);
 
   initial begin
-    $monitor($time, " X = %d, Y %d, CurrHits = %d, Hit = %b, nearMiss = %b, Miss = %b, \
-             TotalHits = %d, numHits = %b, BiggestShipHit = %b", 
-             X, Y, CurrHits, Hit, nearMiss, Miss, TotalHits, 
-             numHits, BiggestShipHit);
+    $monitor($time, " X = %d, Y %d,Hit = %b, nearMiss = %b, Miss = %b, BiggestShipHit = %b", 
+             X, Y, Hit, nearMiss, Miss, BiggestShipHit);
     X = 4'b0001;
     Y = 4'b0001;
-    CurrHits = 4'b0000;
-    CurrBiggest = 5'b00000;
-    HasHit = 0;
     #10 Y = 4'b0010;
-    #10 CurrHits = 4'b0011;
     #10 X = 4'b1001;
-    CurrHits = 4'b0111;
     #10 $finish;
   end
 
@@ -367,14 +344,13 @@ module isBomb
   output logic [4:0] BiggestShipHit,
   output logic Hit, nearMiss, Miss, SomethingIsWrong);
 
-  logic [3:0] CurrHits0, CurrHits1, CurrHits2, CurrHits3, CurrHits4;
-  logic [3:0] CurrHits5, CurrHits6, CurrHits7, CurrHits8, CurrHits9;
-  logic [3:0] XLo, XHi, YLo, YHi;
-  logic [4:0] CurrBiggest;
-  logic [6:0] numHits1, numHits2, numHits3, numHits4;
-  logic [6:0] numHits5, numHits6, numHits7, numHits8;
-  logic Hit1, Hit2, Hit3, Hit4, Hit5, Hit6, Hit7, Hit8;
-  logic HasHit0, HasHit1, HasHit2, HasHit3, HasHit4, HasHit5, HasHit6, HasHit7, HasHit8;
+  logic [3:0] XLo, XHi, YLo, YHi, TotalHits;
+  logic Hit1, Hit2, Hit3, Hit4, Hit5, Hit6, Hit7, Hit8, Hit9;
+  logic Miss1, Miss2, Miss3, Miss4, Miss5, Miss6, Miss7, Miss8, Miss9;
+  logic nearMiss1, nearMiss2, nearMiss3, nearMiss4, nearMiss5;
+  logic nearMiss6, nearMiss7, nearMiss8, nearMiss9;
+  logic [4:0] BiggestShipHit1, BiggestShipHit2, BiggestShipHit3, BiggestShipHit4;
+  logic [4:0] BiggestShipHit5, BiggestShipHit6, BiggestShipHit7, BiggestShipHit8, BiggestShipHit9;
 
   isWrong IsWrong(.*);
 
@@ -393,35 +369,50 @@ module isBomb
     end
   end
 
-  assign CurrHits0 = 4'b0000;
-  assign CurrBiggest = 5'b00000;
+  isHit isHit1(.X(XLo), .Y(YLo), .Hit(Hit1), .nearMiss(nearMiss1), .Miss(Miss1),  
+               .BiggestShipHit(BiggestShipHit1));
+  isHit isHit2(.X(XLo), .Y(Y), .Hit(Hit2), .nearMiss(nearMiss2), .Miss(Miss2),  
+               .BiggestShipHit(BiggestShipHit2));
+  isHit isHit3(.X(XLo), .Y(YHi), .Hit(Hit3), .nearMiss(nearMiss3), .Miss(Miss3),  
+               .BiggestShipHit(BiggestShipHit3));
+  isHit isHit4(.X(X), .Y(YLo), .Hit(Hit4), .nearMiss(nearMiss4), .Miss(Miss4),  
+               .BiggestShipHit(BiggestShipHit4));
+  isHit isHit5(.X(X), .Y(Y), .Hit(Hit5), .nearMiss(nearMiss5), .Miss(Miss5),  
+               .BiggestShipHit(BiggestShipHit5));
+  isHit isHit6(.X(X), .Y(YHi), .Hit(Hit6), .nearMiss(nearMiss6), .Miss(Miss6),  
+               .BiggestShipHit(BiggestShipHit6));
+  isHit isHit7(.X(XHi), .Y(YLo), .Hit(Hit7), .nearMiss(nearMiss7), .Miss(Miss7),  
+               .BiggestShipHit(BiggestShipHit7));
+  isHit isHit8(.X(XHi), .Y(Y), .Hit(Hit8), .nearMiss(nearMiss8), .Miss(Miss8),  
+               .BiggestShipHit(BiggestShipHit8));
+  isHit isHit9(.X(XHi), .Y(YHi), .Hit(Hit9), .nearMiss(nearMiss9), .Miss(Miss9), 
+               .BiggestShipHit(BiggestShipHit9));
 
-  isHit isHit1(.X(X), .Y(Y), .CurrHits(CurrHits0), .Hit(Hit1), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits1), .numHits(numHits1), .HasHit(HasHit0), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit2(.X(X), .Y(Y), .CurrHits(CurrHits1), .Hit(Hit2), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits2), .numHits(numHits2), .HasHit(HasHit1), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit3(.X(X), .Y(Y), .CurrHits(CurrHits2), .Hit(Hit3), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits3), .numHits(numHits3), .HasHit(HasHit2), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit4(.X(X), .Y(Y), .CurrHits(CurrHits3), .Hit(Hit4), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits4), .numHits(numHits4), .HasHit(HasHit3), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit5(.X(X), .Y(Y), .CurrHits(CurrHits4), .Hit(Hit5), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits5), .numHits(numHits5), .HasHit(HasHit4), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit6(.X(X), .Y(Y), .CurrHits(CurrHits5), .Hit(Hit6), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits6), .numHits(numHits6), .HasHit(HasHit5), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit7(.X(X), .Y(Y), .CurrHits(CurrHits6), .Hit(Hit7), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits7), .numHits(numHits7), .HasHit(HasHit6), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit8(.X(X), .Y(Y), .CurrHits(CurrHits7), .Hit(Hit8), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits8), .numHits(numHits8), .HasHit(HasHit7), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
-  isHit isHit9(.X(X), .Y(Y), .CurrHits(CurrHits8), .Hit(Hit), .nearMiss(nearMiss), .Miss(Miss), 
-               .TotalHits(CurrHits9), .numHits(numHits), .HasHit(HasHit8), 
-               .BiggestShipHit(BiggestShipHit), .CurrBiggest(CurrBiggest));
+  always_comb begin
+    TotalHits = 4'b0000;
+    if (Hit1) TotalHits += 1;
+    if (Hit2) TotalHits += 1;
+    if (Hit3) TotalHits += 1;
+    if (Hit4) TotalHits += 1;
+    if (Hit5) TotalHits += 1;
+    if (Hit6) TotalHits += 1;
+    if (Hit7) TotalHits += 1;
+    if (Hit8) TotalHits += 1;
+    if (Hit9) TotalHits += 1;
+  end
+
+  always_comb begin
+    BiggestShipHit = BiggestShipHit1;
+    if (BiggestShipHit < BiggestShipHit2) BiggestShipHit = BiggestShipHit2;
+    if (BiggestShipHit < BiggestShipHit3) BiggestShipHit = BiggestShipHit3;
+    if (BiggestShipHit < BiggestShipHit4) BiggestShipHit = BiggestShipHit4;
+    if (BiggestShipHit < BiggestShipHit5) BiggestShipHit = BiggestShipHit5;
+    if (BiggestShipHit < BiggestShipHit6) BiggestShipHit = BiggestShipHit6;
+    if (BiggestShipHit < BiggestShipHit7) BiggestShipHit = BiggestShipHit7;
+    if (BiggestShipHit < BiggestShipHit8) BiggestShipHit = BiggestShipHit8;
+    if (BiggestShipHit < BiggestShipHit9) BiggestShipHit = BiggestShipHit9;
+  end
+
+  BCDtoSevenSegment BCD2SevenSegment(.*);
 
 endmodule: isBomb
