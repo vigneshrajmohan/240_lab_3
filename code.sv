@@ -127,7 +127,7 @@ module typeMiss
   always_comb 
     unique case ({X, Y})
       8'b0001_0001: nearMiss = 1'b1;
-      8'b0001_0101: nearMiss = 1'b1;
+      8'b0001_0011: nearMiss = 1'b1;
       8'b0001_1000: nearMiss = 1'b1;
       8'b0001_1001: nearMiss = 1'b1;
       8'b0001_1010: nearMiss = 1'b1;
@@ -359,7 +359,7 @@ module isBomb
     if (Big) begin
       XLo = X - 1;
       XHi = X + 1;
-      YLo = X - 1;
+      YLo = Y - 1;
       YHi = Y + 1;
     end
     else begin
@@ -472,9 +472,18 @@ module ChipInterface
   logic Hit, nearMiss, Miss, SomethingIsWrong;
 
 
-  isBomb bomb(.*);
+  isBomb bomb(.X(X), .Y(Y), .BigLeft(BigLeft), .Big(Big), .ScoreThis(ScoreThis), 
+  .numHits(numHits), .BiggestShipHit(BiggestShipHit), .Hit(Hit), .nearMiss(nearMiss),
+  .Miss(Miss), .SomethingIsWrong(SomethingIsWrong));
 
-  assign HEX9 = numHits;
+  assign HEX9[0] = !(ScoreThis & !numHits[0]);
+  assign HEX9[1] = !(ScoreThis & !numHits[1]);
+  assign HEX9[2] = !(ScoreThis & !numHits[2]);
+  assign HEX9[3] = !(ScoreThis & !numHits[3]);
+  assign HEX9[4] = !(ScoreThis & !numHits[4]);
+  assign HEX9[5] = !(ScoreThis & !numHits[5]);
+  assign HEX9[6] = !(ScoreThis & !numHits[6]);
+  
   assign HEX6[0] = !SomethingIsWrong;
   assign HEX6[1] = !SomethingIsWrong;
   assign HEX6[2] = !SomethingIsWrong;
@@ -513,11 +522,11 @@ module ChipInterface
   assign LEDR[16] = Hit;
   assign LEDR[17] = Hit;
 
-  assign  BigLeft[0] = SW[14];
-  assign  BigLeft[1] = SW[15];
-  assign  Big = SW[17];
+  assign  BigLeft[0] = !SW[14];
+  assign  BigLeft[1] = !SW[15];
+  assign  Big = !SW[17];
 
-  assign ScoreThis = KEY[4];
+  assign ScoreThis = !KEY[4];
   assign X[3:0] = SW[7:4];
   assign Y[3:0] = SW[3:0];
 
